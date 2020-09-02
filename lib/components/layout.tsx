@@ -120,7 +120,7 @@ const Layout = ({ children, meta }: any) => {
 
         .container {
           width: 100%;
-          max-width: 750px;
+          max-width: 800px;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -142,7 +142,9 @@ const Layout = ({ children, meta }: any) => {
         .container :global(h4) {
           font-size: 1.2rem;
         }
-
+        .container :global(p) {
+          line-height: 1.8;
+        }
         .date-box {
           display: flex;
           width: fit-content;
