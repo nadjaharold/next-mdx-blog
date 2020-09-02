@@ -15,7 +15,7 @@ const BLOG = {
   // email: "rus0clov@gmail.com",
   github: "nadjaharold",
   twitter: "nadjaharold",
-  domain: "harold.tokyo",
+  domain: "xenodochial-bell-5fe39c.netlify.app",
 
   cn: false,
   enableViews: false,
