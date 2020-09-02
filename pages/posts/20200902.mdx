@@ -1,13 +1,58 @@
 import Layout from "lib/components/layout";
-import {} from "@zeit-ui/react";
+import { Link } from "@zeit-ui/react";
 
 export const meta = {
-  title: "20200902",
-  date: "2020-09-02T11:56:15.849Z",
+  title: "Next.js × MDX で新規ブログ公開",
+  date: "2020-09-03T00:00:00+09:00",
   description: "",
   image: "",
 };
 
-My first post!
+今年(2020 年)の 1 月初旬に[初めての個人ブログ](https://harold.tokyo)を開設しました。  
+しかし当時の技術レベルでは WordPress での制作が限界だったため、[^1]  
+今現在になって見直してみると、まぁ中学生のお遊びのようなクオリティ。。
+とはいえ、可愛らしいといえば可愛らしいので、ドメインは生かしたまま保存しておき、
+技術メモとしてのブログ機能はもっと「A: モダンな作り」で「B: 編集しやすいもの」に置き換えることにしました。
+
+[^1]: 当時は Vue/React は勿論、一切の静的型付け言語を触ったことすら無いレベル。
+
+まず、上記 A の要件に関しては、Next.js×TypeScript を採用しました。これまで業務では Vue/Nuxt.js ばかりで
+React には一切触れてこなかったため、少しでも React への理解を深めたい気持ちが強め。とはいえ既に Nuxt.js に慣れきっており
+ルーティング周りの処理や OGP 設定のことを考えると素の React よりも Next.js を使いたい気持ちが打ち勝ちました。
+また、Nuxt-TypeScript で苦戦していたこともあり、Next の場合にはどんなものなのか把握しておきたい気持ちもありました。
+
+次に、上記 B の要件に関しては、MDX を採用しました。MDX とは、README.md でお馴染みの、マークダウン形式の文書内に
+JSX を埋め込むことが出来る「JSX embedded in Markdown」というもの。普通のマークダウン記法では手が届きにくい部分にも
+アプローチすることが可能になる、まさに「痒いところに手が届く」優れものです。詳しくは下記のリポジトリをば。
+
+<Link href="https://github.com/mdx-js/mdx" icon color target="_blank">
+  MDX: JSX in Markdown for ambitious projects
+</Link>
+
+具体的には、各 mdx ファイルで下記のような記法が可能となります。めっちゃ便利。
+
+```typescript
+import Layout from "lib/components/layout";
+import { Link } from "@zeit-ui/react";
+
+export const meta = {
+  title: "Next.js × MDX で新規ブログ公開",
+  date: "2020-09-03T00:00:00+09:00",
+  description: "",
+  image: "",
+};
+
+/* ~中略 (普通のMarkdown記法での本文)~ */
+
+<Link href="https://github.com/mdx-js/mdx" icon color target="_blank">
+  MDX: JSX in Markdown for ambitious projects
+</Link>;
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
+```
+
+まぁこんな感じです。WordPress や Contentful のような CMS を使用していないため、
+記事内容も当然 Git 管理されてるのでバージョン管理や編集作業が極めて楽。最高です。
+ブログ等の運用は比較的苦手な部類ですが、ちまちまと学んだことの言語化を続けていこうと思います。
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
