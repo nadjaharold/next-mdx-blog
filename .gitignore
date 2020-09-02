@@ -1,0 +1,6 @@
+/node_modules
+/.next
+/out
+posts.json
+sitemap.xml
+.now
