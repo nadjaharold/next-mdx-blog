@@ -75,7 +75,7 @@ const Layout = ({ children, meta }: any) => {
         )}
       </Head>
       <div className="container">
-        {inDetailPage && <Spacer />}
+        {/* {inDetailPage && <Spacer />} */}
         <Profile />
         {inDetailPage && <Spacer y={1} />}
         {inDetailPage && <Text h1>{meta?.title}</Text>}
@@ -114,13 +114,13 @@ const Layout = ({ children, meta }: any) => {
           width: 100vw;
           min-height: 100vh;
           display: flex;
-          align-items: center;
           justify-content: center;
+          background: #f5f6f7;
         }
 
         .container {
           width: 100%;
-          max-width: 800px;
+          max-width: none;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -129,29 +129,65 @@ const Layout = ({ children, meta }: any) => {
 
         .container :global(h1) {
           font-size: 2rem;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto 0.625rem;
         }
 
         .container :global(h2) {
           font-size: 1.7rem;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto 0.625rem;
         }
 
         .container :global(h3) {
           font-size: 1.4rem;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto 0.625rem;
         }
 
         .container :global(h4) {
           font-size: 1.2rem;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto 0.625rem;
         }
         .container :global(p) {
           line-height: 1.8;
+          width: 100%;
+          max-width: 800px;
+          margin: 1rem auto;
         }
+        .container :global(.link) {
+          display: block;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .container :global(pre) {
+          display: block;
+          width: 100%;
+          max-width: 800px;
+          margin: 16pt auto;
+        }
+        .container :global(.footnotes) {
+          display: block;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
         .date-box {
           display: flex;
           width: fit-content;
           align-items: center;
           height: 30px;
-          margin: -0.5rem 0 0 0;
           position: relative;
+          width: 100%;
+          max-width: 800px;
+          margin: -0.5rem auto 0;
         }
 
         .date-box > :global(.date) {
@@ -190,6 +226,7 @@ const Layout = ({ children, meta }: any) => {
           .date-box {
             justify-content: center;
             margin: 0 auto;
+            width: fit-content;
           }
 
           .date-box :global(.image) {
@@ -199,6 +236,9 @@ const Layout = ({ children, meta }: any) => {
 
         .share-sns {
           text-align: right;
+          max-width: 800px;
+          width: 100%;
+          margin: 0 auto;
         }
       `}</style>
     </section>

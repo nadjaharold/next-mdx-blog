@@ -42,20 +42,28 @@ const Profile = React.memo(({}) => {
 
       <style jsx>{`
         .profile {
-          padding: ${theme.layout.gap} 0;
+          padding: 10vh 20px ${theme.layout.gap};
+          box-sizing: border-box;
+          background: #272821;
+          min-height: 30vh;
+        }
+        .profile :global(.user-row) {
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         .profile :global(.name) {
           font-size: 1.6rem;
           margin: 0;
-          color: ${theme.palette.accents_5};
+          color: #f5f6f7;
           line-height: 1;
         }
 
         .profile :global(.intro) {
-          color: ${theme.palette.accents_5};
+          color: #f5f6f7;
           font-size: 0.875rem;
-          margin-top: 5px;
+          max-width: 800px;
+          margin: 5px auto 1rem;
         }
 
         @media only screen and (max-width: 767px) {

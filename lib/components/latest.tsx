@@ -36,7 +36,9 @@ const Latest = () => {
 
       <style jsx>{`
         section {
-          margin-top: calc(${theme.layout.gap} * 2);
+          max-width: 800px;
+          width: 100%;
+          margin: calc(${theme.layout.gap} * 2) auto 0;
         }
 
         section h2 {
@@ -48,6 +50,7 @@ const Latest = () => {
           padding: 2px ${theme.layout.gapQuarter} 0 0;
           display: inline-block;
           margin: 0;
+          width: fit-content;
         }
 
         .content {
@@ -55,6 +58,7 @@ const Latest = () => {
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15),
             0 1px 2px 0 rgba(0, 0, 0, 0.1);
           padding: 8px 10px 0;
+          background: #fff;
         }
 
         .more {

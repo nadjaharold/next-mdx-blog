@@ -30,8 +30,12 @@ const ProfileLinks = () => {
       {links.map((link: string) => makeLink(link))}
 
       <style jsx>{`
+        .link {
+          max-width: 800px;
+          margin: auto;
+        }
         .link :global(a) {
-          color: ${theme.palette.accents_5};
+          color: #f5f6f7;
           text-transform: uppercase;
           font-size: 0.8rem;
           margin-right: ${theme.layout.gapHalf};
