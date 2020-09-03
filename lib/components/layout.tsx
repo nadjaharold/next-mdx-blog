@@ -77,36 +77,38 @@ const Layout = ({ children, meta }: any) => {
       <div className="container">
         {/* {inDetailPage && <Spacer />} */}
         <Profile />
-        {inDetailPage && <Spacer y={1} />}
-        {inDetailPage && <Text h1>{meta?.title}</Text>}
-        {inDetailPage && (
-          <div className="date-box">
-            <Text p className="date">
-              {date}
-            </Text>
-            {showViews && <Image width={100} height={24} src={url} />}
-          </div>
-        )}
-        {inDetailPage && <Spacer y={1} />}
-        {children}
-        {inDetailPage && (
-          <div className="share-sns">
-            <Spacer y={0.5} />
-            <Button type="secondary" onClick={click} ghost>
-              <Link href={hatenalink} target="_blank">
-                Share on Hatena
-              </Link>
-            </Button>
-            <Spacer y={0.5} />
-            <Button type="success" onClick={click} ghost>
-              <Link href={tweetlink} target="_blank">
-                Share on Twitter
-              </Link>
-            </Button>
-          </div>
-        )}
-        <Spacer y={5} />
-        <ContactsWithNoSSR />
+        {inDetailPage && <Spacer y={2} />}
+        <div className="mdx__content">
+          {inDetailPage && <Text h1>{meta?.title}</Text>}
+          {inDetailPage && (
+            <div className="date-box">
+              <Text p className="date">
+                {date}
+              </Text>
+              {showViews && <Image width={100} height={24} src={url} />}
+            </div>
+          )}
+          {inDetailPage && <Spacer y={1} />}
+          {children}
+          {inDetailPage && (
+            <div className="share-sns">
+              <Spacer y={0.5} />
+              <Button type="secondary" onClick={click} ghost>
+                <Link href={hatenalink} target="_blank">
+                  Share on Hatena
+                </Link>
+              </Button>
+              <Spacer y={0.5} />
+              <Button type="success" onClick={click} ghost>
+                <Link href={tweetlink} target="_blank">
+                  Share on Twitter
+                </Link>
+              </Button>
+            </div>
+          )}
+          <Spacer y={5} />
+          <ContactsWithNoSSR />
+        </div>
       </div>
 
       <style jsx>{`
@@ -126,57 +128,39 @@ const Layout = ({ children, meta }: any) => {
           justify-content: flex-start;
           text-spacing: none;
         }
+        .mdx__content {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
 
         .container :global(h1) {
           font-size: 2rem;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto 0.625rem;
         }
 
         .container :global(h2) {
           font-size: 1.7rem;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto 0.625rem;
         }
 
         .container :global(h3) {
           font-size: 1.4rem;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto 0.625rem;
         }
 
         .container :global(h4) {
           font-size: 1.2rem;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto 0.625rem;
         }
         .container :global(p) {
           line-height: 1.8;
-          width: 100%;
-          max-width: 800px;
-          margin: 1rem auto;
         }
         .container :global(.link) {
           display: block;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
         }
         .container :global(pre) {
           display: block;
-          width: 100%;
-          max-width: 800px;
-          margin: 16pt auto;
+          background: #fff;
         }
         .container :global(.footnotes) {
           display: block;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
         }
 
         .date-box {
@@ -185,9 +169,6 @@ const Layout = ({ children, meta }: any) => {
           align-items: center;
           height: 30px;
           position: relative;
-          width: 100%;
-          max-width: 800px;
-          margin: -0.5rem auto 0;
         }
 
         .date-box > :global(.date) {
@@ -211,10 +192,12 @@ const Layout = ({ children, meta }: any) => {
 
         @media only screen and (max-width: 767px) {
           .container {
-            max-width: 91vw;
+            max-width: 100vw;
             min-height: 100vh;
           }
-
+          .mdx__content {
+            max-width: 91vw;
+          }
           .container :global(h1) {
             text-align: center;
           }
@@ -236,9 +219,6 @@ const Layout = ({ children, meta }: any) => {
 
         .share-sns {
           text-align: right;
-          max-width: 800px;
-          width: 100%;
-          margin: 0 auto;
         }
       `}</style>
     </section>

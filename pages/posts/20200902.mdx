@@ -2,11 +2,13 @@ import Layout from "lib/components/layout";
 import { Link, Spacer } from "@zeit-ui/react";
 
 export const meta = {
-  title: "Next.js × MDX で新規ブログ公開",
+  title: "Next.js × MDX で新ブログ公開",
   date: "2020-09-03T00:00:00+09:00",
   description: "",
   image: "",
 };
+
+## はじめに
 
 今年(2020 年)の 1 月初旬に[初めての個人ブログ](https://harold.tokyo)を開設しました。  
 しかし当時の技術レベルでは WordPress での制作が限界だったため、[^1]  
@@ -55,4 +57,8 @@ export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
 記事内容も当然 Git 管理されてるのでバージョン管理や編集作業が極めて楽。最高です。
 ブログ等の運用は比較的苦手な部類ですが、ちまちまと学んだことの言語化を続けていこうと思います。
 
-export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
+export default ({ children }) => (
+  <div className="mdx__body">
+    <Layout meta={meta}>{children}</Layout>
+  </div>
+);

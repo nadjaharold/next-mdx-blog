@@ -64,6 +64,13 @@ const Application = ({ Component, pageProps }: AppProps) => {
           </ThemeConfigProvider>
         </CssBaseline>
         <style global jsx>{`
+          .mdx__body h2:after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            display: block;
+            background-image: linear-gradient(120deg, #70e1f5, #ffd194);
+          }
           .tag {
             color: ${theme.palette.accents_5};
           }
