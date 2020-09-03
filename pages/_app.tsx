@@ -71,6 +71,12 @@ const Application = ({ Component, pageProps }: AppProps) => {
             display: block;
             background-image: linear-gradient(120deg, #70e1f5, #ffd194);
           }
+          .mdx__body .btn .text {
+            display: block;
+          }
+          .mdx__body .btn .text .link {
+            width: 100%;
+          }
           .tag {
             color: ${theme.palette.accents_5};
           }

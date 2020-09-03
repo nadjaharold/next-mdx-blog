@@ -1,1 +1,27 @@
-[{"name":"fixed","children":[{"name":"profile.mdx","url":"/fixed/profile","meta":{"title":"","date":"","description":""}}]},{"name":"posts","children":[{"name":"Next.js × MDX で新規ブログ公開","url":"/posts/20200902","meta":{"title":"Next.js × MDX で新規ブログ公開","date":"2020-09-03T00:00:00+09:00","description":"","image":""}}]}]
+[
+  {
+    "name": "fixed",
+    "children": [
+      {
+        "name": "profile.mdx",
+        "url": "/fixed/profile",
+        "meta": { "title": "", "date": "", "description": "" }
+      }
+    ]
+  },
+  {
+    "name": "posts",
+    "children": [
+      {
+        "name": "Next.js × MDX で新ブログ公開",
+        "url": "/posts/20200902",
+        "meta": {
+          "title": "Next.js × MDX で新ブログ公開",
+          "date": "2020-09-03T00:00:00+09:00",
+          "description": "",
+          "image": ""
+        }
+      }
+    ]
+  }
+]
