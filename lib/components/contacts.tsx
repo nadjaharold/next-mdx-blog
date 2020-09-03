@@ -73,18 +73,7 @@ const Contacts = () => {
             padding: 0 ${theme.layout.gapQuarter};
             position: absolute;
             bottom: 2.5rem;
-            max-width: 800px;
-            width: 100%;
             display: flex;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-          }
-          .contacts :global(.link) {
-            display: flex;
-            width: fit-content;
-            max-width: none;
-            margin: initial;
           }
 
           .contacts :global(svg) {
