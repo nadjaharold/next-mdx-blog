@@ -1,6 +1,6 @@
 # harold's diary
 
-URL: [https://xenodochial-bell-5fe39c.netlify.app/](https://xenodochial-bell-5fe39c.netlify.app/)
+URL: [https://dev-harold.net/](https://dev-harold.net/)
 
 ## About
 
@@ -29,7 +29,7 @@ $ npm run export
 
 ### CSS
 
-- styled JSX
+- styled-JSX
 
 ### Linter
 
