@@ -85,7 +85,7 @@ const sortPosts = (data) => {
   }
 
   sitemap({
-    baseUrl: "https://xenodochial-bell-5fe39c.netlify.app",
+    baseUrl: "https://dev-harold.net",
     pagesDirectory: path.join(__dirname, "../pages"),
     ignoredPaths: ["index"],
     targetDirectory: "public/",
