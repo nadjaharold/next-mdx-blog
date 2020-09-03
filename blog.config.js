@@ -12,7 +12,6 @@ const BLOG = {
     list: "Posts",
   },
 
-  // email: "rus0clov@gmail.com",
   github: "nadjaharold",
   twitter: "nadjaharold",
   domain: "dev-harold.net",
