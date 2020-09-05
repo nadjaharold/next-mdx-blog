@@ -44,6 +44,11 @@ const ProfileLinks = () => {
         .link :global(a:last-of-type) {
           margin-right: 0;
         }
+        @media only screen and (max-width: 767px) {
+          .link {
+            text-align: center;
+          }
+        }
       `}</style>
     </div>
   );

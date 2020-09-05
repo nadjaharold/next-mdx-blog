@@ -74,6 +74,9 @@ const Application = ({ Component, pageProps }: AppProps) => {
           .mdx__body hr {
             margin: 2rem 0;
           }
+          .mdx__body .share-sns {
+            margin: 3rem 0 0;
+          }
           .mdx__body .footnotes hr {
             margin: 3rem 0 2rem;
             opacity: 0.3;
