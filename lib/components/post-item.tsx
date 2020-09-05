@@ -32,6 +32,10 @@ const PostItem = ({ post }: any) => {
           margin-bottom: calc(1.35 * ${theme.layout.gapHalf});
           overflow: hidden;
           max-width: 60vw;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15),
+            0 1px 2px 0 rgba(0, 0, 0, 0.1);
+          padding: 8px 10px 6px;
+          background: #fff;
         }
 
         .item :global(.link) {

@@ -10,4 +10,8 @@ export const meta = {
 
 My first post.
 
-export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
+export default ({ children }) => (
+  <div className="mdx__body">
+    <Layout meta={meta}>{children}</Layout>
+  </div>
+);
