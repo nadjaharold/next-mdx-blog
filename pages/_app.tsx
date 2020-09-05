@@ -64,6 +64,21 @@ const Application = ({ Component, pageProps }: AppProps) => {
           </ThemeConfigProvider>
         </CssBaseline>
         <style global jsx>{`
+          .mdx__body h2,
+          .mdx__body h3,
+          .mdx__body h4,
+          .mdx__body h5,
+          .mdx__body h6 {
+            margin: 1.8em 0 2.4rem;
+          }
+          .mdx__body hr {
+            margin: 2rem 0;
+          }
+          .mdx__body .footnotes hr {
+            margin: 3rem 0 2rem;
+            opacity: 0.3;
+            border-color: #fafafa;
+          }
           .mdx__body h2:after {
             content: "";
             width: 100%;

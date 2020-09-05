@@ -154,6 +154,7 @@ const Layout = ({ children, meta }: any) => {
         }
         .container :global(.link) {
           display: block;
+          width: 100%;
         }
         .container :global(pre) {
           display: block;
