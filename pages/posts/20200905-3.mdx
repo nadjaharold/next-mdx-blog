@@ -1,0 +1,45 @@
+import Layout from "lib/components/layout";
+import { Display } from "@zeit-ui/react";
+
+export const meta = {
+  title: "[TS導入] React × ResasAPI × Highchartsで作る県別人口グラフ",
+  date: "2020-09-05T05:13:36.733Z",
+  description: "",
+  image: "",
+};
+
+## 作ったもの 🎉 ([前回](https://dev-harold.net/posts/20200905-2)と同様)
+
+<Display caption="The Graph of Total Population Transition by Prefecture">
+  <img
+    src="/20200905-2/demo.gif"
+    alt="The Graph of Total Population Transition by Prefecture"
+    title="The Graph of Total Population Transition by Prefecture"
+  />
+</Display>
+
+## Demo 用サイト ([前回](https://dev-harold.net/posts/20200905-2)と同様)
+
+前回に続き、今回も Netlify を利用。  
+[Netlify: https://gracious-wright-14c3d4.netlify.app/](https://gracious-wright-14c3d4.netlify.app/)
+
+## ソースコード
+
+Github のリポジトリはこちら。  
+[The Graph of Total Population Transition by Prefecture](https://github.com/nadjaharold/react-ts-resas-highcharts)
+
+## 所感
+
+[前回](https://dev-harold.net/posts/20200905-2)の内容をいま可能な範囲で簡単に TypeScript で書き換えてみた。  
+例の如く業務での TypeScript 経験は微塵もなく[^1]、React もほぼ記述経験がないため、まぁ any の多いこと...。  
+当たり前だが、競技プログラミング等で TS を使う場合と、
+こういった API 通信や各種プラグインを使用している中で TS を使う場合だとかなり雰囲気が異なる。  
+引き続き TypeScript Deep Dive 等で TS の理解と習熟度を上げていく次第。
+
+[^1]: Nuxt-ts なら少しあるが TS 入れてるだけで使用しているとはとても言い難い。。
+
+export default ({ children }) => (
+  <div className="mdx__body">
+    <Layout meta={meta}>{children}</Layout>
+  </div>
+);
