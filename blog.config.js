@@ -1,8 +1,8 @@
 const BLOG = {
   author: "harold",
   title: "harold's diary",
-  description: "harold's diary",
-  summary: "a web developer in Tokyo",
+  description: "This website is a tech blog written about what I learned.",
+  summary: "Software Engineer(Front-end)📯 in Tokyo",
   language: "ja",
   latestLimit: 4,
 
