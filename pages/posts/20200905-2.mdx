@@ -1,0 +1,74 @@
+import Layout from "lib/components/layout";
+import { Display } from "@zeit-ui/react";
+
+export const meta = {
+  title: "React × ResasAPI × Highchartsで作る県別人口グラフ",
+  date: "2020-09-05T04:48:21.194Z",
+  description: "",
+  image: "",
+};
+
+## 作ったもの 🎉
+
+<Display caption="The Graph of Total Population Transition by Prefecture">
+  <img
+    src="/20200905-2/demo.gif"
+    alt="The Graph of Total Population Transition by Prefecture"
+    title="The Graph of Total Population Transition by Prefecture"
+  />
+</Display>
+
+## Demo 用サイト
+
+前回に続き、今回も Netlify を利用。  
+[Netlify: https://gracious-wright-14c3d4.netlify.app/](https://gracious-wright-14c3d4.netlify.app/)
+
+## ソースコード
+
+Github のリポジトリはこちら。  
+[The Graph of Total Population Transition by Prefecture](https://github.com/nadjaharold/react-resas-highcharts)
+
+## Document, および使用技術 📜
+
+### 地域経済分析システム RESAS([前回](https://dev-harold.net/posts/20200905)と同様)
+
+**ResasAPI** については下記の通り。(公式サイトからの引用)
+
+> 地域経済分析システム（以下、RESAS）は、地域に関する官民の様々なデータを搭載し、
+> 誰もが分かりやすいように「見える化」したシステムです。
+> このシステムは、自治体職員の方や、地域の活性化に関心を持つ様々な分野の方によって、
+> 効果的な施策の立案・実行・検証のためなどに広く利用されています。
+
+- [RESAS API](https://opendata.resas-portal.go.jp/)
+- [RESAS API Documents](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)
+
+---
+
+### グラフ描画ライブラリ Highcharts
+
+**Highcharts** はグラフ描画ライブラリ。  
+前回とはちょっと異なり、Vue 用のものではなく React 用のライブラリを使用。
+
+- [Highcharts](https://www.highcharts.com/)
+- [React Highcharts(Official)](https://github.com/highcharts/highcharts-react)
+
+---
+
+### React.js × Material-UI
+
+[前回](https://dev-harold.net/posts/20200905)、Nuxt の構成で作ったものを **React** でも作ってみた次第。
+UI フレームワークは **Material-UI** を使用。Vue/Nuxt で実装していたことは大体 React でも簡単に再現できる。
+
+- [Material-UI](https://material-ui.com/)
+
+## まとめ
+
+React は業務での使用経験はなく、プライベートでも Qiita 記事読んだり流れてくる情報でチラ見したことあるくらいで、具体的な実装はほぼ経験なし。
+けど、Vue/Nuxt で一定程度習熟していれば全く問題なく乗り換えられることを今回把握。まぁ Vue/Nuxt で大したことやってないのでそれはそう。。  
+**React Hooks** や **Redux** などまだまだ把握してないので、今後はその辺把握していきたいところ。
+
+export default ({ children }) => (
+  <div className="mdx__body">
+    <Layout meta={meta}>{children}</Layout>
+  </div>
+);
