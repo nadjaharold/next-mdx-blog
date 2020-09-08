@@ -1,0 +1,40 @@
+import Layout from "lib/components/layout";
+import { Display } from "@zeit-ui/react";
+
+export const meta = {
+  title: "Flutter環境構築(macOS, VSCode)",
+  date: "2020-09-08T07:24:58.655Z",
+  description: "",
+  image: "",
+};
+
+## VSCode で Flutter 開発
+
+ひょんなことから Flutter に入門することになったので、とりあえず環境構築。ざっくり調べて必要なもの把握してインストール作業、
+パス通したりホットリロードの確認等、合わせて 1 時間ほどで完了したのでメモ。
+
+## 参考にした記事等
+
+下記 note 記事がキャプチャ多めに言語化されてたので非常に助かりました。ただ、設定項目等忘れて後々詰まると厄介なので
+こうして記事化してメモしておく。入門時ってよく把握せずに悪手踏むことが多々あるので注意。。
+
+- [MacOS での Flutter 開発環境構築](https://note.com/hatchoutschool/n/n9846d3b90a02)
+- [Flutter の開発を VSCode で行うための環境構築まとめ](https://blogenist.jp/2019/11/20/9795/)
+
+## とりあえず出来た。
+
+任意の Android 端末, iOS 端末等切り替えられるし便利〜！いい時代です。
+
+<Display caption="VSCodeでFlutterプロジェクトのホットリロード環境構築">
+  <img
+    src="/20200908/demo.gif"
+    alt="VSCodeでFlutterプロジェクトのホットリロード環境構築"
+    title="VSCodeでFlutterプロジェクトのホットリロード環境構築"
+  />
+</Display>
+
+export default ({ children }) => (
+  <div className="mdx__body">
+    <Layout meta={meta}>{children}</Layout>
+  </div>
+);
