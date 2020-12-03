@@ -1,6 +1,6 @@
 const BLOG = {
-  author: "harold",
-  title: "harold's diary",
+  author: "Горби",
+  title: "Горби's diary",
   description: "This website is a tech blog written about what I learned.",
   summary: "Software Engineer(Front-end)📯 in Tokyo",
   language: "ja",

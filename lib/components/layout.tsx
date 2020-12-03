@@ -43,7 +43,7 @@ const Layout = ({ children, meta }: any) => {
   const showViews = useMemo(() => BLOG.enableViews, []);
 
   const normalizedTitle = encodeCharacterForLink(meta?.title);
-  const tweetlink = `https://twitter.com/intent/tweet?text=${normalizedTitle}%20-%20harold's%20diary%20%0a&url=https://${BLOG.domain}${asPath}`;
+  const tweetlink = `https://twitter.com/intent/tweet?text=${normalizedTitle}%20-%20Горби's%20diary%20%0a&url=https://${BLOG.domain}${asPath}`;
   const hatenalink = `https://b.hatena.ne.jp/add?mode=confirm&url=https://${BLOG.domain}${asPath}&title=${normalizedTitle}"`;
 
   const [toasts, setToast] = useToasts();
